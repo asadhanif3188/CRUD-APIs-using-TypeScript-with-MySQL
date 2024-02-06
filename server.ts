@@ -1,9 +1,14 @@
+import dotenv from 'dotenv';
+
 import express, { Application } from "express";
 import Server from "./src/index";
+
+dotenv.config();
 
 const app: Application = express();
 const server: Server = new Server(app);
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 8080;
+// const PORT: number = parseInt(process.env.PORT as string, 10);
 
 app
   .listen(PORT, "localhost", function () {
