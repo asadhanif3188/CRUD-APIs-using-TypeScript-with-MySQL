@@ -19,3 +19,10 @@ npm install mysql2
 
 
 ```
+
+To create build folder.
+```
+npx tsc
+```
+
+
